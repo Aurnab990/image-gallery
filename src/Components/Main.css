@@ -1,0 +1,92 @@
+/* CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Top-bar design */
+  span {
+    display: flex;
+    gap: 8px;
+    color: black;
+  }
+  
+  p {
+    margin-top: 2px;
+  }
+  
+  .top-bar {
+    display: flex;
+    gap: 900px;
+  }
+  
+  .delete-button {
+    background-color: #ff5757;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+  
+    &:hover {
+      background-color: #ff3333;
+      transform: scale(1.1);
+    }
+  
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+  
+  /* Display images */
+ 
+  .img-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+ 
+  .image-checkbox {
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    z-index: -1;
+    display: none; 
+  }
+  
+  /* Show the checkbox on hover */
+  .image-container:hover .image-checkbox {
+    z-index: 2;
+    display: block; 
+  }
+  
+  /* Set a larger size for the first image */
+  .img-container img:first-child {
+    height: 400px; 
+    width: 400px; 
+  }
+  
+  /* Set the size for the other images */
+  .img-container img {
+    height: 300px;
+    width: 300px;
+    filter: blur(0);
+    transition: filter 0.3s;
+  }
+  
+  /* Hover effect for the images */
+  .img-container img:hover {
+    filter: blur(2px);
+  }
+  
